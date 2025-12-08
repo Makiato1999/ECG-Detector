@@ -64,13 +64,15 @@ Execute the cells sequentially to Load Data -> Train Model -> Determine Threshol
 
 ## 📊 Results
 
-1. Signal Reconstruction
+#### 1. Signal Reconstruction
 
 Normal Heartbeat: The reconstructed signal (Red) closely follows the original input (Blue).
 
 Anomaly: The model fails to capture the shape of the abnormal heartbeat, leading to a visible gap (high error).
 
-2. Loss Distribution & Thresholding
+![Reconstruction](./images/ecg.png)
+
+#### 2. Loss Distribution & Thresholding
 A threshold is determined by analyzing the MAE distribution of the training set (e.g., Mean + 2*STD).
 - Accuracy: ~95% (Example metric)
 - Precision/Recall: See the notebook output for the classification report.
