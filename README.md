@@ -74,5 +74,4 @@ Anomaly: The model fails to capture the shape of the abnormal heartbeat, leading
 
 #### 2. Loss Distribution & Thresholding
 A threshold is determined by analyzing the MAE distribution of the training set (e.g., Mean + 2*STD).
-- Accuracy: ~95% (Example metric)
-- Precision/Recall: See the notebook output for the classification report.
+- Accuracy/Precision/Recall: See the notebook output for the classification report.
