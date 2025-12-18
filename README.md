@@ -75,3 +75,16 @@ Anomaly: The model fails to capture the shape of the abnormal heartbeat, leading
 #### 2. Loss Distribution & Thresholding
 A threshold is determined by analyzing the MAE distribution of the training set (e.g., Mean + 2*STD).
 - Accuracy/Precision/Recall: See the notebook output for the classification report.
+
+## 🪴 Limitations and Future Directions
+
+While the current autoencoder-based framework demonstrates effective ECG anomaly detection, several important limitations remain and point toward meaningful future research directions.
+
+**1. Recall limitations due to temporal modeling capacity**  
+The current architecture may struggle to capture long-range temporal dependencies in ECG signals, which can lead to false negatives for subtle or rhythm-level abnormalities. Future work could explore more expressive temporal models, such as LSTM-based or Transformer-based autoencoders, to better model long-term dynamics and improve recall.
+
+**2. Limited clinical interpretability of detected anomalies**  
+At present, the framework focuses on detecting the presence of abnormal signals without distinguishing abnormality types. Integrating supervised methods and clinical labels into a hybrid (unsupervised + supervised) framework could enable downstream classification of abnormality categories, moving beyond detection toward clinically meaningful interpretation.
+
+**3. Simplified signal setting with single-lead ECG**  
+The current experiments are conducted on single-lead ECG signals. Extending the framework to multi-lead ECG inputs would allow evaluation of model scalability and robustness in more realistic diagnostic scenarios, where cross-lead temporal and spatial correlations play a critical role.
